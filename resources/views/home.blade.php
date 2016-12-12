@@ -10,9 +10,7 @@
 
 @Section('DropDown') @stop
 
-@Section('Body') COMING SOON 
-
-<hr>
+@Section('Body')
 
 <img src="http://canineplanet.net/wp-content/uploads/2014/08/cute-dog-2014-08-22.jpg" width="100%" align="middle">
 
