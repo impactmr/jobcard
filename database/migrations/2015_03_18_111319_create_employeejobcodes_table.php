@@ -17,8 +17,8 @@ class CreateEmployeejobcodesTable extends Migration {
                 $table->increments('id');
                 $table->integer('fk1_employee_code')->unsigned();
                 $table->integer('fk2_job_code')->unsigned();
-                $table->timestamp('start_date'); 
-                $table->timestamps();
+                $table->timestamp('start_date')->nullable();
+                $table->nullableTimestamps();
             });
 
            Schema::table('employeejobcode', function(Blueprint $table) {

@@ -16,8 +16,8 @@ class CreateJobcodesTable extends Migration {
                 $table->increments('job_code');
                 $table->integer('fk1_job_level')->unsigned();
                 $table->decimal('rate',38,2);
-                $table->timestamp('start_date');
-                $table->timestamps();
+                $table->timestamp('start_date')->nullable();
+                $table->nullableTimestamps();
             });
 
            Schema::table('jobcode', function(Blueprint $table) {

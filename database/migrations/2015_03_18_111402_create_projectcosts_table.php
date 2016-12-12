@@ -19,7 +19,7 @@ class CreateProjectcostsTable extends Migration {
                 $table->decimal('supplier_costs',38,2)->nullable();
                 $table->decimal('target_profit',38,2)->nullable();
                 $table->decimal('estimated_completion',38,2)->nullable();
-                $table->timestamps();
+                $table->nullableTimestamps();
             });
 
            Schema::table('projectcost', function(Blueprint $table) {

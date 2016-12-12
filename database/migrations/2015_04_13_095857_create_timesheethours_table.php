@@ -18,7 +18,7 @@ class CreateTimesheethoursTable extends Migration {
                 $table->integer('fk1_employee_code')->unsigned();
                 $table->integer('fk2_project_code')->unsigned();
                 $table->decimal('worked_hours',38,2)->nullable();
-                $table->timestamps();
+                $table->nullableTimestamps();
             });
 
            Schema::table('timesheethours', function(Blueprint $table) {

@@ -26,7 +26,7 @@ class CreateProjectsTable extends Migration {
                 $table->integer('qual')->nullable();
                 $table->integer('time_only')->nullable();
                 $table->integer('tracking')->nullable();
-                $table->timestamps();
+                $table->nullableTimestamps();
             });
 
         }
