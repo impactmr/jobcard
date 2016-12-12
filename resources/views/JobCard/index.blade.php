@@ -15,9 +15,9 @@
     @endif
 
     <div class="col-xs-8">
-        {!! Form::open(['method' => 'POST','url' => ['jobcard/0']]) !!}
-            {!! Form::select('selectedproject', $projectslist, $selectedproject, ['class' => 'form-control', 'onchange' => 'this.form.submit()']) !!}
-        {!! Form::close() !!} 
+        {!! Form::open(['name' => 'projectform', 'method' => 'POST','url' => ['jobcard/0']]) !!}
+            {!! Form::select('selectedproject', $projectslist, $selectedproject, ['id' => 'select2-target', 'class' => 'form-control', 'onchange' => 'this.form.submit()']) !!}
+        {!! Form::close() !!}
     </div>
 
     
@@ -250,6 +250,8 @@
                     },
                 ],
             });
+
+            $('#select2-target').select2();
         });
     </script>
 @Stop
