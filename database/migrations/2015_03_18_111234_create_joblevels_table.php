@@ -16,7 +16,7 @@ class CreateJoblevelsTable extends Migration {
             Schema::create('joblevel', function(Blueprint $table) {
                 $table->increments('job_level');
                 $table->string('description',80);
-                $table->timestamps();
+                $table->nullableTimestamps();
             });
 
         }

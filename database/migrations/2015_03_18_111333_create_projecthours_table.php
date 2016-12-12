@@ -18,7 +18,7 @@ class CreateProjecthoursTable extends Migration {
                 $table->integer('fk2_project_code')->unsigned();
                 $table->decimal('forecast_hours',38,2)->nullable();
                 $table->decimal('budget_hours',38,2)->nullable();
-                $table->timestamps();
+                $table->nullableTimestamps();
             });
 
            Schema::table('projecthours', function(Blueprint $table) {

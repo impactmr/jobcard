@@ -17,7 +17,7 @@ class CreateEmployeesTable extends Migration {
                 $table->increments('employee_code');
                 $table->string('first_name',60);
                 $table->string('last_name',60);
-                $table->timestamps();
+                $table->nullableTimestamps();
             });
 
         }
