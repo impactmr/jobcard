@@ -3,12 +3,12 @@
     
     <head>
         <meta charset = "utf-8">
-        <meta name="viewport" content="width=device-width"> 
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/dt-1.10.13/b-1.2.3/b-colvis-1.2.3/datatables.min.css"/>
         <link href="{{ asset('/css/templatemo_415_dashboard/css/templatemo_main.css') }}" rel="stylesheet">
         <title>@yield('PageTitle')</title>
         @yield('Script')
         <script type="text/javascript" src="{{ asset('/js/paging.js') }}"></script>
-
     </head>
 
     <body>
@@ -95,5 +95,5 @@
     <!-- Scripts -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    @yield('EndScript')
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.13/b-1.2.3/b-colvis-1.2.3/datatables.min.js"></script>    @yield('EndScript')
 </html>
