@@ -173,9 +173,9 @@
                             </h4>
                         </td>
                         
-                        @if ($employee[4] - $employee[2] < 0)
+                        @if ($employee[4] > $employee[2])
                             <td style="background:#FFCCCC;">
-                        @elseif ($employee[4] - $employee[2] > 0)
+                        @elseif ($employee[4] < $employee[2])
                             <td style="background:#CEEEDB;">
                         @else
                             <td style="background:#F0F0F0 ;">
@@ -186,9 +186,9 @@
                             </h4>
                         </td>
                         
-                         @if ($employee[4] - $employee[3] < 0)
+                         @if ($employee[4] > $employee[3])
                             <td style="background:#FFCCCC;">
-                        @elseif ($employee[4] - $employee[3] > 0)
+                        @elseif ($employee[4] < $employee[3])
                             <td style="background:#CEEEDB;">
                         @else
                             <td style="background:#F0F0F0;">

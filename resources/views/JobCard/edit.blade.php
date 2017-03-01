@@ -49,7 +49,7 @@
 
         <div class="table-responsive">          
             <table class="table text-center">
-                
+
                 <tr>
                     <th>Target Profit</th>                
                     <td style="background-color:#FFFFE6;border-color:#FFFF00;background-color:1px">                        
@@ -80,9 +80,14 @@
         
         <div class="table-responsive">          
             <table class="table text-center table-bordered" id="results">
-                <th> Employee </th> <th class="text-center"> Budget Hours </th> 
-                <th class="text-center"> Worked Hours </th>
-                <th class="text-center"> Forecast Hours </th>
+                <thead>
+                <tr>
+                    <th> Employee </th> <th class="text-center"> Budget Hours </th>
+                    <th class="text-center"> Worked Hours </th>
+                    <th class="text-center"> Forecast Hours </th>
+                </tr>
+                </thead>
+                <tbody>
                 
                 <?php $i=0 ?>
                 
@@ -117,8 +122,8 @@
 
                     
                     
-                @endforeach 
-
+                @endforeach
+                </tbody>
             </table>
             
             
@@ -127,7 +132,6 @@
 
         </div>
         
-        <div style="margin-top:1%" id="pageNavPosition"></div>
     </div>
 
 @stop
@@ -135,13 +139,11 @@
 @Section('Footer') Copyright &copy; Impact Research 2015 @Stop
 
 @Section('EndScript')
-
-    <script type="text/javascript"><!--
-        
-        var pager = new Pager('results', 10); 
-        pager.init(); 
-        pager.showPageNav('pager', 'pageNavPosition'); 
-        pager.showPage(1);
-    //--></script>
-
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#results').DataTable({
+            "order": [[ 1, "desc" ]]
+        });
+    });
+</script>
 @Stop
