@@ -142,7 +142,8 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('#results').DataTable({
-            "order": [[ 1, "desc" ]]
+            "order": [[ 1, "desc" ]],
+            "pageLength": 100
         });
     });
 </script>

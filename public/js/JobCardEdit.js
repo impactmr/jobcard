@@ -22,8 +22,8 @@ function disableEnterKey(e)
          
             employeecount = $('#EmployeeCount').html();
 
-            TargetProfit = parseInt($('#target1').html().replace(/\s/g, ''));
-            EstimatedCompletion = parseInt($('#target2').html());
+            TargetProfit = parseFloat($('#target1').html().replace(/\s/g, ''));
+            EstimatedCompletion = parseFloat($('#target2').html());
 
             if (isNaN(TargetProfit)){
                 alert("Target Profit Must Be A Number");
@@ -43,8 +43,8 @@ function disableEnterKey(e)
             //Validate inputted Hours, ensure they are all numbers.
             for (i = 1; i <= employeecount; i++){
 
-                BudgetHours = parseInt($('#budget_' + i).html());
-                ForecastHours = parseInt($('#forecast_' + i).html());
+                BudgetHours = parseFloat($('#budget_' + i).html());
+                ForecastHours = parseFloat($('#forecast_' + i).html());
 
                 if (isNaN(BudgetHours)){
                     alert("Budget Hours Must Be A Number");
