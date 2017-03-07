@@ -20,10 +20,10 @@ function disableEnterKey(e)
 
         function Validation() {
          
-            employeecount = document.getElementById('EmployeeCount').innerHTML;
+            employeecount = $('#EmployeeCount').html();
 
-            TargetProfit = document.getElementById('target1').innerHTML.replace(/\s/g, '');;
-            EstimatedCompletion = document.getElementById('target2').innerHTML;
+            TargetProfit = $('#target1').html().replace(/\s/g, '');;
+            EstimatedCompletion = $('#target2').html();
 
             if (isNaN(TargetProfit)){
                 alert("Target Profit Must Be A Number");
@@ -43,8 +43,8 @@ function disableEnterKey(e)
             //Validate inputted Hours, ensure they are all numbers.
             for (i = 1; i <= employeecount; i++){
 
-                BudgetHours = document.getElementById('budget_' + i).innerHTML;
-                ForecastHours = document.getElementById('forecast_' + i).innerHTML;
+                BudgetHours = $('#budget_' + i).html();
+                ForecastHours = $('#forecast_' + i).html();
 
                 if (isNaN(BudgetHours)){
                     alert("Budget Hours Must Be A Number");
@@ -68,7 +68,7 @@ function disableEnterKey(e)
 
             }
             
-            document.getElementById("SubmitButton").disabled = true;
+            $("#SubmitButton").disabled = true;
             
             CreateInputs();
             
@@ -77,13 +77,13 @@ function disableEnterKey(e)
         function CreateInputs() {
         
             //Get Number of Employees
-            employeecount = document.getElementById('EmployeeCount').innerHTML;
+            employeecount = $('#EmployeeCount').html();
 
             //Create submission form with all inputs
             for (i = 1; i <= employeecount; i++){
 
-                BudgetHours = document.getElementById('budget_' + i).innerHTML;
-                ForecastHours = document.getElementById('forecast_' + i).innerHTML;
+                BudgetHours = $('#budget_' + i).html();
+                ForecastHours = $('#forecast_' + i).html();
 
                 BudgetHours = "<input type='hidden' name='budget_" + i + "' value='" + BudgetHours + "'/>";
                 ForecastHours = "<input type='hidden' name='forecast_" + i + "' value='" + ForecastHours + "'/>";
@@ -102,6 +102,6 @@ function disableEnterKey(e)
             $('#inputs').append(TargetProfit);
             $('#inputs').append(EstimatedCompletion);
 
-            document.getElementById("inputs").submit();
+            $("#inputs").submit();
 
             }
